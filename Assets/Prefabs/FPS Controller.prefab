@@ -333,7 +333,7 @@ MonoBehaviour:
   mouseInputInversion: 0
   cameraInputMethod: 0
   verticalRotationRange: 170
-  mouseSensitivity: 10
+  mouseSensitivity: 4.4
   fOVToMouseSensitivity: 1
   cameraSmoothing: 5
   lockAndHideCursor: 1
