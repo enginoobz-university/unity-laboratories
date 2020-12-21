@@ -2,10 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
 public class SceneLoader : MonoBehaviour
 {
-    private void Awake() {
+    [SerializeField] Dropdown dropdown;
+    [SerializeField] int initialSceneId = 0;
+    Dictionary<int, string> scenes; // build index and name
+    private void Awake()
+    {
         if (FindObjectsOfType<SceneLoader>().Length > 1)
         {
             Destroy(gameObject);
@@ -16,7 +22,27 @@ public class SceneLoader : MonoBehaviour
         }
     }
 
-    public void HandleDropdown(int option){
+    private void Start()
+    {
+        // init task names
+        scenes = new Dictionary<int, string>(){
+            {0, "Lab 1: Table"},
+            {1, "Lab 1: Train"}
+        };
+
+        // init dropdown options
+        foreach (string taskName in scenes.Values)
+        {
+            dropdown.options.Add(new Dropdown.OptionData(taskName));
+        }
+
+        // load initial dropdown option
+        SceneManager.LoadScene(initialSceneId);
+        dropdown.value = initialSceneId;
+    }
+
+    public void HandleDropdown(int option)
+    {
         switch (option)
         {
             default:
