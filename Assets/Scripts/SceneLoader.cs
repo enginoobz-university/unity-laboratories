@@ -20,10 +20,13 @@ public class SceneLoader : MonoBehaviour
         {
             DontDestroyOnLoad(gameObject);
         }
+
     }
 
     private void Start()
     {
+        SceneManager.LoadScene(initialSceneId);
+
         // init task names
         scenes = new Dictionary<int, string>(){
             {0, "Lab 1: Table"},
@@ -37,7 +40,6 @@ public class SceneLoader : MonoBehaviour
         }
 
         // load initial dropdown option
-        SceneManager.LoadScene(initialSceneId);
         dropdown.value = initialSceneId;
     }
 
