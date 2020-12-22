@@ -359,7 +359,7 @@ MonoBehaviour:
   _crouchModifiers:
     useCrouch: 1
     toggleCrouch: 0
-    crouchKey: 306
+    crouchKey: 308
     crouchWalkSpeedMultiplier: 0.5
     crouchJumpPowerMultiplier: 0
     crouchOverride: 0
