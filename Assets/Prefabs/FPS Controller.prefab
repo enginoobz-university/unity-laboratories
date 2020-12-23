@@ -201,7 +201,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -386,14 +386,14 @@ MonoBehaviour:
   headbobHeight: 1
   headbobSideMovement: 0.5
   jumpLandIntensity: 3
-  enableAudioSFX: 0
+  enableAudioSFX: 1
   Volume: 5
-  jumpSound: {fileID: 0}
-  landSound: {fileID: 0}
+  jumpSound: {fileID: 8300000, guid: 573441c3cfc815643879b3c31bc5fe54, type: 3}
+  landSound: {fileID: 8300000, guid: 573441c3cfc815643879b3c31bc5fe54, type: 3}
   footStepSounds:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 8300000, guid: 9f05c26c62c18684d943b9001be5f879, type: 3}
+  - {fileID: 8300000, guid: 20577941b63bdec47b7c5fb57decf97e, type: 3}
+  - {fileID: 8300000, guid: 6a55c8297fbb69e47a194dc87433bd74, type: 3}
   fsmode: 1
   dynamicFootstep:
     materialMode: 0
