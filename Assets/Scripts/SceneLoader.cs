@@ -10,18 +10,7 @@ public class SceneLoader : MonoBehaviour
     [SerializeField] Dropdown dropdown;
     [SerializeField] int initialSceneId = 0;
     Dictionary<int, string> scenes; // build index and name
-    private void Awake()
-    {
-        if (FindObjectsOfType<SceneLoader>().Length > 1)
-        {
-            Destroy(gameObject);
-        }
-        else
-        {
-            DontDestroyOnLoad(gameObject);
-        }
-
-    }
+   
 
     private void Start()
     {
@@ -30,7 +19,7 @@ public class SceneLoader : MonoBehaviour
         // init task names
         scenes = new Dictionary<int, string>(){
             {0, "Lab 1: Table"},
-            {1, "Lab 1: Train"}
+            {1, "Lab 1: Train"},
         };
 
         // init dropdown options
@@ -45,11 +34,6 @@ public class SceneLoader : MonoBehaviour
 
     public void HandleDropdown(int option)
     {
-        switch (option)
-        {
-            default:
-                SceneManager.LoadScene(option);
-                break;
-        }
+        SceneManager.LoadScene(option);
     }
 }
