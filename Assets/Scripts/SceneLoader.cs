@@ -10,10 +10,10 @@ public class SceneLoader : MonoBehaviour
     [SerializeField] Dropdown dropdown;
     [SerializeField] int initialSceneId = 0;
     Dictionary<int, string> scenes; // build index and name
-   
 
     private void Start()
     {
+        Screen.fullScreen = true;
         SceneManager.LoadScene(initialSceneId);
 
         // init task names

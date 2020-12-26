@@ -8,18 +8,22 @@ public class MouseController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+#if UNITY_WEBGL
         Cursor.SetCursor(arrowCursor, Vector2.zero, CursorMode.ForceSoftware);
+#else
+        Cursor.SetCursor(cursorTexture, hotSpot, CursorMode.Auto);
+#endif
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.Escape))
         {
             UnlockMouse();
         }
 
-        if (Input.GetKeyDown(KeyCode.M))
+        if (Input.GetKeyDown(KeyCode.C))
         {
             ToggleMouseLock();
         }
