@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class MouseController : MonoBehaviour
 {
+    [SerializeField] Texture2D arrowCursor;
     // Start is called before the first frame update
     void Start()
     {
-
+        Cursor.SetCursor(arrowCursor, Vector2.zero, CursorMode.ForceSoftware);
     }
 
     // Update is called once per frame
