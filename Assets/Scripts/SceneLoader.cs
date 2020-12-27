@@ -35,5 +35,11 @@ public class SceneLoader : MonoBehaviour
     public void HandleDropdown(int option)
     {
         SceneManager.LoadScene(option);
+        LockCursor();
+    }
+
+    private void LockCursor(){
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
     }
 }
