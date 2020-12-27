@@ -99,7 +99,7 @@ LightmapSettings:
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 112000000, guid: ce8577cfff9dc574fa19a83570668376,
     type: 2}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -189,6 +189,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &368969181 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 368969181, guid: 8e93e307d56dddf4ba9f5c7eba38f9ba,
+    type: 3}
+  m_PrefabInstance: {fileID: 6422286475193589137}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!43 &538367823
 Mesh:
   m_ObjectHideFlags: 0
@@ -5599,7 +5611,7 @@ PrefabInstance:
     - target: {fileID: 908545982360883914, guid: e904ac4bf69255c479bdab437b583a50,
         type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 908545982360883914, guid: e904ac4bf69255c479bdab437b583a50,
         type: 3}
@@ -6297,6 +6309,38 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 368969179, guid: 8e93e307d56dddf4ba9f5c7eba38f9ba, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 753321631, guid: 8e93e307d56dddf4ba9f5c7eba38f9ba, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1676854404, guid: 8e93e307d56dddf4ba9f5c7eba38f9ba, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1676854404, guid: 8e93e307d56dddf4ba9f5c7eba38f9ba, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1827769604, guid: 8e93e307d56dddf4ba9f5c7eba38f9ba, type: 3}
+      propertyPath: mainIcon
+      value: 
+      objectReference: {fileID: 368969181}
+    - target: {fileID: 2007369572, guid: 8e93e307d56dddf4ba9f5c7eba38f9ba, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: -46.41501
+      objectReference: {fileID: 0}
+    - target: {fileID: 2007369572, guid: 8e93e307d56dddf4ba9f5c7eba38f9ba, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 9.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 2007369573, guid: 8e93e307d56dddf4ba9f5c7eba38f9ba, type: 3}
+      propertyPath: m_HorizontalAlignment
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 2499377833386565952, guid: 8e93e307d56dddf4ba9f5c7eba38f9ba,
         type: 3}
       propertyPath: m_Name
@@ -6305,7 +6349,7 @@ PrefabInstance:
     - target: {fileID: 2499377833386565954, guid: 8e93e307d56dddf4ba9f5c7eba38f9ba,
         type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 2499377833386565954, guid: 8e93e307d56dddf4ba9f5c7eba38f9ba,
         type: 3}

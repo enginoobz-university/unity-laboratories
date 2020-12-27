@@ -20,7 +20,8 @@ public class MouseController : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.Escape))
         {
-            UnlockMouse();
+            if (Cursor.lockState == CursorLockMode.Locked)
+                UnlockMouse();
         }
 
         if (Input.GetKeyDown(KeyCode.C))
