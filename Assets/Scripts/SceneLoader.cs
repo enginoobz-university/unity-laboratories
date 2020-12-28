@@ -9,21 +9,20 @@ using Michsky.UI.ModernUIPack;
 public class SceneLoader : MonoBehaviour
 {
     [SerializeField] CustomDropdown dropdown;
-    [SerializeField] int initialSceneId = 0;
-    Dictionary<int, string> scenes; // build index and name
+    [SerializeField] int initialSceneId;
+    SortedDictionary<int, string> scenes; // build index and name
 
     private void Start()
     {
         Screen.fullScreen = true;
-        SceneManager.LoadScene(initialSceneId);
 
         // init task names
-        scenes = new Dictionary<int, string>(){
+        scenes = new SortedDictionary<int, string>(){
             {0, "Lab 1: Table"},
             {1, "Lab 1: Train"},
         };
 
-        if(dropdown==null) return;
+        if (dropdown == null) return;
 
         // init dropdown options
         foreach (string taskName in scenes.Values)
@@ -34,7 +33,8 @@ public class SceneLoader : MonoBehaviour
         dropdown.SetupDropdown();
 
         // load initial dropdown option
-        dropdown.selectedText.text = scenes[initialSceneId];
+        dropdown.ChangeDropdownInfo(initialSceneId);
+        SceneManager.LoadScene(initialSceneId);
     }
 
     public void HandleDropdown(int option)
@@ -43,7 +43,8 @@ public class SceneLoader : MonoBehaviour
         //LockCursor();
     }
 
-    private void LockCursor(){
+    private void LockCursor()
+    {
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
     }
