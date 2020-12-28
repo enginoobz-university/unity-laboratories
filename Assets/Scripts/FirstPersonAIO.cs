@@ -350,7 +350,7 @@ public class FirstPersonAIO : MonoBehaviour
 
     private void Update()
     {
-        if (!joystickEnabled) { HandleMouseRotate(); }
+        if (!joystickEnabled && !Input.GetKey(KeyCode.LeftControl)) { HandleMouseRotate(); }
 
         #region Input Settings - Update
         if (canHoldJump ? (canJump && Input.GetButton("Jump")) : (Input.GetButtonDown("Jump") && canJump))
