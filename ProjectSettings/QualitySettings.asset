@@ -44,6 +44,7 @@ QualitySettings:
       type: 2}
     excludedTargetPlatforms:
     - WebGL
+    - Android
   - serializedVersion: 2
     name: Medium
     pixelLightCount: 1
@@ -82,6 +83,7 @@ QualitySettings:
       type: 2}
     excludedTargetPlatforms:
     - WebGL
+    - Android
   - serializedVersion: 2
     name: High
     pixelLightCount: 2

@@ -8,9 +8,26 @@ using Michsky.UI.ModernUIPack;
 
 public class SceneLoader : MonoBehaviour
 {
+    [SerializeField] SystemInput systemInput;
+    [SerializeField] GameObject mainUI;
     [SerializeField] CustomDropdown dropdown;
     [SerializeField] int initialSceneId;
     SortedDictionary<int, string> scenes; // build index and name
+    void OnEnable()
+    {
+        //Tell our 'OnLevelFinishedLoading' function to start listening for a scene change as soon as this script is enabled.
+        SceneManager.sceneLoaded += OnLevelFinishedLoading;
+    }
+
+    void OnDisable()
+    {
+        //Tell our 'OnLevelFinishedLoading' function to stop listening for a scene change as soon as this script is disabled. Remember to always have an unsubscription for every delegate you subscribe to!
+        SceneManager.sceneLoaded -= OnLevelFinishedLoading;
+    }
+
+    void OnLevelFinishedLoading(Scene scene, LoadSceneMode mode)
+    {
+    }
 
     private void Start()
     {
@@ -18,8 +35,8 @@ public class SceneLoader : MonoBehaviour
 
         // init task names
         scenes = new SortedDictionary<int, string>(){
-            {0, "Lab 1: Table"},
-            {1, "Lab 1: Train"},
+            {1, "Lab 1: Table"},
+            {2, "Lab 1: Train"},
         };
 
         if (dropdown == null) return;
@@ -33,13 +50,14 @@ public class SceneLoader : MonoBehaviour
         dropdown.SetupDropdown();
 
         // load initial dropdown option
-        dropdown.ChangeDropdownInfo(initialSceneId);
+        dropdown.ChangeDropdownInfo(initialSceneId - 1);
         SceneManager.LoadScene(initialSceneId);
+        mainUI.SetActive(true);
     }
 
     public void HandleDropdown(int option)
     {
-        SceneManager.LoadScene(option);
+        SceneManager.LoadScene(option + 1);
         //LockCursor();
     }
 
@@ -48,4 +66,6 @@ public class SceneLoader : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
     }
+
+
 }

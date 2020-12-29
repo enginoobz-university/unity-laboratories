@@ -43,5 +43,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63ad56f293ede524b9fd656f49ae51ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  systemInput: {fileID: 0}
   dropdown: {fileID: 0}
-  initialSceneId: 1
+  initialSceneId: 2
