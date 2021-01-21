@@ -36,7 +36,8 @@ public class SceneLoader : MonoBehaviour
         // init task names
         scenes = new SortedDictionary<int, string>(){
             {1, "Lab 1: Table"},
-            {2, "Lab 1: Train"},
+            {2, "Lab 2: Train"},
+            {3, "Lab 3: Maze"},
         };
 
         if (dropdown == null) return;

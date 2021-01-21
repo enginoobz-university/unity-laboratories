@@ -64,7 +64,7 @@ using UnityEditor;
 using System.Net;
 #endif
 
-[RequireComponent(typeof(CapsuleCollider)), RequireComponent(typeof(Rigidbody)), AddComponentMenu("First Person AIO")]
+[RequireComponent(typeof(Collider)), RequireComponent(typeof(Rigidbody)), AddComponentMenu("First Person AIO")]
 
 public class FirstPersonAIO : MonoBehaviour
 {

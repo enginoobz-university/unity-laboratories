@@ -998,7 +998,7 @@ MonoBehaviour:
   hotKeyAlt: 0
   keepAlive: 1
   operationMode: 2
-  forceFrameRate: 1
+  forceFrameRate: 0
   forcedFrameRate: 60
   background: 1
   backgroundColor: {r: 0, g: 0, b: 0, a: 0.60784316}
@@ -1016,7 +1016,7 @@ MonoBehaviour:
   lineSpacing: 0.94
   countersSpacing: 0
   paddingOffset: {x: 5, y: 15}
-  pixelPerfect: 1
+  pixelPerfect: 0
   sortingOrder: 10000
   lookAndFeelFoldout: 0
   advancedFoldout: 0
