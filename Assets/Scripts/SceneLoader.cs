@@ -58,6 +58,7 @@ public class SceneLoader : MonoBehaviour
 
     public void HandleDropdown(int option)
     {
+        Time.timeScale = 1;
         SceneManager.LoadScene(option + 1);
         //LockCursor();
     }

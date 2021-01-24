@@ -18,10 +18,24 @@ public class PlayerCollisionDetector : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Diamond"))
+        switch (other.gameObject.tag)
         {
-            Destroy(other.gameObject);
-            MazeGame.Instance.OnDiamondCollected();
+            case "Diamond":
+                Destroy(other.gameObject);
+                MazeGame.Instance.OnDiamondCollected();
+                break;
+        }
+    }
+
+    private void OnCollisionEnter(Collision other)
+    {
+        switch (other.gameObject.tag)
+        {
+            case "Enemy":
+                MazeGame.Instance.Loose();
+                Time.timeScale = 0;
+                // GetComponent<FirstPersonAIO>().enabled = false;
+                break;
         }
     }
 }

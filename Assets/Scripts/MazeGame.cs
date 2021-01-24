@@ -37,4 +37,8 @@ public class MazeGame : MonoBehaviour
     {
 
     }
+
+    public void Loose(){
+        print("Game over");
+    }
 }
