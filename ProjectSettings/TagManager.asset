@@ -8,6 +8,7 @@ TagManager:
   - Ground
   - Diamond
   - Wall
+  - Enemy
   layers:
   - Default
   - TransparentFX
