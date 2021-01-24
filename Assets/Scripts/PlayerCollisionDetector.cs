@@ -33,8 +33,6 @@ public class PlayerCollisionDetector : MonoBehaviour
         {
             case "Enemy":
                 MazeGame.Instance.Loose();
-                Time.timeScale = 0;
-                // GetComponent<FirstPersonAIO>().enabled = false;
                 break;
         }
     }

@@ -10,6 +10,8 @@ public class MazeGame : MonoBehaviour
     [SerializeField] TextMeshProUGUI diamondLabel;
     [SerializeField] TextMeshProUGUI gameOverLabel;
     [SerializeField] GameObject gameOverPanel;
+    [SerializeField] GameObject helpPanel;
+
     private static MazeGame _instance;
     public static MazeGame Instance { get { return _instance; } }
 
@@ -38,12 +40,14 @@ public class MazeGame : MonoBehaviour
 
     private void Win()
     {
+        Time.timeScale = 0;
         gameOverLabel.text = "Game clear";
         gameOverPanel.SetActive(true);
     }
 
     public void Loose()
     {
+        Time.timeScale = 0;
         gameOverLabel.text = "Game over";
         gameOverPanel.SetActive(true);
     }
@@ -52,5 +56,15 @@ public class MazeGame : MonoBehaviour
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         Time.timeScale = 1;
+    }
+
+    public void ShowInstruction()
+    {
+        helpPanel.SetActive(true);
+    }
+
+    public void Resume()
+    {
+        helpPanel.SetActive(false);
     }
 }
