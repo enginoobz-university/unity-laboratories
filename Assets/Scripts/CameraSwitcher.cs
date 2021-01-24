@@ -5,6 +5,7 @@ using UnityEngine;
 public class CameraSwitcher : MonoBehaviour
 {
     [SerializeField] Camera[] cameras;
+    [SerializeField] FirstPersonAIO player;
     int activeCameraId;
     // Start is called before the first frame update
     void Start()
@@ -30,6 +31,18 @@ public class CameraSwitcher : MonoBehaviour
                 activeCameraId++;
 
             cameras[activeCameraId].gameObject.SetActive(true);
+
+            // TODO: reset rotation
+            // if not FPS camera, reset rotation and disable looking at 
+            if (activeCameraId != 0)
+            {
+                player.enableCameraMovement = false;
+                player.transform.rotation = Quaternion.Euler(0, 0, 0);
+            }
+            else
+            {
+                player.enableCameraMovement = true;
+            }
 
         }
     }
